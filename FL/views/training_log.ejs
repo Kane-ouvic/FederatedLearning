@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <meta name="description" />
+    <link rel="stylesheet" href="twicon/twicon.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Dinosaur", "Length"],
+          ["Acrocanthosaurus (top-spined lizard)", 12.2],
+          ["Albertosaurus (Alberta lizard)", 9.1],
+          ["Allosaurus (other lizard)", 12.2],
+          ["Apatosaurus (deceptive lizard)", 22.9],
+          ["Archaeopteryx (ancient wing)", 0.9],
+          ["Argentinosaurus (Argentina lizard)", 36.6],
+          ["Baryonyx (heavy claws)", 9.1],
+          ["Brachiosaurus (arm lizard)", 30.5],
+          ["Ceratosaurus (horned lizard)", 6.1],
+          ["Coelophysis (hollow form)", 2.7],
+          ["Compsognathus (elegant jaw)", 0.9],
+          ["Deinonychus (terrible claw)", 2.7],
+          ["Diplodocus (double beam)", 27.1],
+          ["Dromicelomimus (emu mimic)", 3.4],
+          ["Gallimimus (fowl mimic)", 5.5],
+          ["Mamenchisaurus (Mamenchi lizard)", 21.0],
+          ["Megalosaurus (big lizard)", 7.9],
+          ["Microvenator (small hunter)", 1.2],
+          ["Ornithomimus (bird mimic)", 4.6],
+          ["Oviraptor (egg robber)", 1.5],
+          ["Plateosaurus (flat lizard)", 7.9],
+          ["Sauronithoides (narrow-clawed lizard)", 2.0],
+          ["Seismosaurus (tremor lizard)", 45.7],
+          ["Spinosaurus (spiny lizard)", 12.2],
+          ["Supersaurus (super lizard)", 30.5],
+          ["Tyrannosaurus (tyrant lizard)", 15.2],
+          ["Ultrasaurus (ultra lizard)", 30.5],
+          ["Velociraptor (swift robber)", 1.8],
+        ]);
+
+        var options = {
+          title: "圖表",
+          legend: { position: "none" },
+        };
+
+        var chart = new google.visualization.Histogram(
+          document.getElementById("chart_div")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 40;
+      }
+
+      header {
+        background-color: aqua;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      nav {
+        background-color: gray;
+        display: flex;
+      }
+
+      nav ul {
+        display: flex;
+        padding-left: 1rem;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        padding: 0.5rem 0.75rem;
+      }
+
+      nav ul li a {
+        padding: 0.5rem 0.75rem;
+        color: white;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      }
+
+      nav ul li a:hover {
+        color: yellow;
+      }
+
+      main {
+        width: 100%;
+        display: flex;
+      }
+      section.left {
+        width: 150rem;
+      }
+      section.left,
+      section.right {
+        padding: 1.5rem;
+      }
+
+      section.right h4 {
+        font-size: 1.25rem;
+        text-align: center;
+      }
+
+      section.right p {
+        margin: 1rem;
+      }
+
+      .active {
+        color: yellow;
+      }
+    </style>
+    <!-- =============================================================================================================== -->
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- 標題 -->
+    <header>
+      <h1>
+        <i class="twicon-main-island"></i>主標題 <% if(index%2 === 0){ %>
+        <i class="fa-solid fa-check"></i>
+        <% } else { %>
+        <p>You are not Code_Breaker</p>
+        <% } %>
+      </h1>
+      <h3>副標題</h3>
+    </header>
+    <!-- 導覽列 -->
+    <nav>
+      <ul>
+        <li><a href="#">個人資料</a></li>
+        <li>
+          <a class="active" href="./second.html"
+            ><i class="twicon-roc-flag"></i>訓練模型</a
+          >
+        </li>
+        <li>
+          <a href="./third.html"><i class="twicon-lamay-island"></i>資料表</a>
+        </li>
+        <li>
+          <a href="./fourth.html"
+            ><i class="twicon-kinmen-island"></i>模型管理</a
+          >
+        </li>
+        <li>
+          <a href="./fifth.html"
+            ><i class="twicon-kinmen-island"></i>歷史紀錄查詢</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 主要內容 -->
+    <main>
+      <section class="left">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">訓練站點</th>
+              <th scope="col">連線時間</th>
+              <th scope="col">狀態</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%for(let i = 0; i < site_names.length; i++) {%>
+            <tr>
+              <th scope="row"><%= i %></th>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+            </tr>
+            <% } %>
+
+            <tr>
+              <th scope="row">1</th>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <br />
+        <!-- /////////////////// -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">上傳者</th>
+              <th scope="col">上傳時間</th>
+              <th scope="col">訓練時間</th>
+              <th scope="col">狀態</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%for(let i = 0; i < 5; i++) {%>
+            <tr>
+              <th scope="row"><%= i %></th>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+            </tr>
+            <% } %>
+
+            <tr>
+              <th scope="row">1</th>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+              <td>--------</td>
+            </tr>
+          </tbody>
+        </table>
+        <form action="/starttrain" method="post">
+          <input class="btn btn-primary" type="button" value="Upload" />
+          <input class="btn btn-primary" type="submit" value="Submit" />
+          <input
+            class="btn btn-primary"
+            type="reset"
+            value="Reset"
+            style="background-color: red"
+          />
+        </form>
+        <!-- <div id="chart_div" style="width: 900px; height: 500px"></div> -->
+      </section>
+      <section class="right">
+        <!-- <h4>
+          訓練紀錄-------------------------
+          <br />
+        </h4> -->
+        <!-- <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7497902.0225315625!2d115.58905080082596!3d23.42129748404592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ed5cb2b61c3a5%3A0xcf20ddb042be7fa0!2z6Ie654Gj!5e0!3m2!1szh-TW!2stw!4v1659357849709!5m2!1szh-TW!2stw"
+          width="450"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe> -->
+      </section>
+      <div
+        data-bs-spy="scroll"
+        data-bs-target="#navbar-example2"
+        data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true"
+        class="scrollspy-example bg-light p-3 rounded-2"
+        tabindex="0"
+      >
+        <h4 id="scrollspyHeading1">First heading</h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading2">Second heading</h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading3">Third heading</h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading4">Fourth heading</h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading5">Fifth heading</h4>
+        <p>...</p>
+      </div>
+    </main>
+  </body>
+  <script src="./test.js"></script>
+</html>
